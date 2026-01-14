@@ -1,0 +1,516 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "OpAdxAdapterAdmob",
+    "printedName": "OpAdxAdapterAdmob",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SdkVersion",
+        "printedName": "SdkVersion",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sdkVersion",
+            "printedName": "sdkVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17OpAdxAdapterAdmob10SdkVersionV03sdkF0SSvpZ",
+            "mangledName": "$s17OpAdxAdapterAdmob10SdkVersionV03sdkF0SSvpZ",
+            "moduleName": "OpAdxAdapterAdmob",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17OpAdxAdapterAdmob10SdkVersionV03sdkF0SSvgZ",
+                "mangledName": "$s17OpAdxAdapterAdmob10SdkVersionV03sdkF0SSvgZ",
+                "moduleName": "OpAdxAdapterAdmob",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "buildNum",
+            "printedName": "buildNum",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17OpAdxAdapterAdmob10SdkVersionV8buildNumSSvpZ",
+            "mangledName": "$s17OpAdxAdapterAdmob10SdkVersionV8buildNumSSvpZ",
+            "moduleName": "OpAdxAdapterAdmob",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17OpAdxAdapterAdmob10SdkVersionV8buildNumSSvgZ",
+                "mangledName": "$s17OpAdxAdapterAdmob10SdkVersionV8buildNumSSvgZ",
+                "moduleName": "OpAdxAdapterAdmob",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17OpAdxAdapterAdmob10SdkVersionV",
+        "mangledName": "$s17OpAdxAdapterAdmob10SdkVersionV",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Var",
+        "name": "sdkVersion",
+        "printedName": "sdkVersion",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:17OpAdxAdapterAdmob10sdkVersionSSvp",
+        "mangledName": "$s17OpAdxAdapterAdmob10sdkVersionSSvp",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:17OpAdxAdapterAdmob10sdkVersionSSvg",
+            "mangledName": "$s17OpAdxAdapterAdmob10sdkVersionSSvg",
+            "moduleName": "OpAdxAdapterAdmob",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 6317,
+      "length": 40,
+      "value": "\"OpAdxAdmobNativeAd - \""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 6353,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 6356,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6411,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 165,
+      "length": 10,
+      "value": "\"2.2.15.0\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 209,
+      "length": 6,
+      "value": "\"1002\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 229,
+      "length": 11,
+      "value": "\"parameter\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 303,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 343,
+      "length": 13,
+      "value": "\"placementId\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 386,
+      "length": 10,
+      "value": "\"bundleId\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 438,
+      "length": 31,
+      "value": "\"com.opera.ads.mediation.admob\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 502,
+      "length": 15,
+      "value": "\"com.opera.ads\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 588,
+      "length": 3,
+      "value": "101"
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 626,
+      "length": 3,
+      "value": "102"
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 659,
+      "length": 3,
+      "value": "103"
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 701,
+      "length": 3,
+      "value": "104"
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobMediationAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 199,
+      "length": 8,
+      "value": "\"2.2.15\""
+    }
+  ]
+}
