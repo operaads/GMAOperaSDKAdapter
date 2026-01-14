@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   # ―――  基本信息  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "GMAOperaSDKAdapter"
-  spec.version      = "2.2.16.0"
+  spec.version      = "2.2.16.1"
   spec.summary      = "Opera Ads Adapter for Google(Admob) Mediation."
 
   spec.description  = <<-DESC

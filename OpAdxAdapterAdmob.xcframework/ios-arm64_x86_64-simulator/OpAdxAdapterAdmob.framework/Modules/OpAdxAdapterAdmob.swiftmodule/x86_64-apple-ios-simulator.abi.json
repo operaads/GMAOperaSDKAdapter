@@ -15,257 +15,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "GoogleMobileAds",
-        "printedName": "GoogleMobileAds",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "OpAdxSdk",
-        "printedName": "OpAdxSdk",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "GoogleMobileAds",
-        "printedName": "GoogleMobileAds",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "OpAdxSdk",
-        "printedName": "OpAdxSdk",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Var",
-        "name": "sdkVersion",
-        "printedName": "sdkVersion",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "String",
-            "printedName": "Swift.String",
-            "usr": "s:SS"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:17OpAdxAdapterAdmob10sdkVersionSSvp",
-        "mangledName": "$s17OpAdxAdapterAdmob10sdkVersionSSvp",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:17OpAdxAdapterAdmob10sdkVersionSSvg",
-            "mangledName": "$s17OpAdxAdapterAdmob10sdkVersionSSvg",
-            "moduleName": "OpAdxAdapterAdmob",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "GoogleMobileAds",
-        "printedName": "GoogleMobileAds",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "OpAdxSdk",
-        "printedName": "OpAdxSdk",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "GoogleMobileAds",
-        "printedName": "GoogleMobileAds",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "OpAdxSdk",
-        "printedName": "OpAdxSdk",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "GoogleMobileAds",
-        "printedName": "GoogleMobileAds",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "OpAdxSdk",
-        "printedName": "OpAdxSdk",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "GoogleMobileAds",
-        "printedName": "GoogleMobileAds",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "OpAdxSdk",
-        "printedName": "OpAdxSdk",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "GoogleMobileAds",
-        "printedName": "GoogleMobileAds",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "OpAdxSdk",
-        "printedName": "OpAdxSdk",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpAdxAdapterAdmob",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "SdkVersion",
         "printedName": "SdkVersion",
@@ -388,11 +137,231 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 165,
+      "length": 10,
+      "value": "\"2.2.16.1\""
+    },
+    {
+      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 209,
+      "length": 6,
+      "value": "\"1002\""
+    },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobConstants.swift",
       "kind": "StringLiteral",
@@ -464,13 +433,6 @@
       "value": "104"
     },
     {
-      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobMediationAdapter.swift",
-      "kind": "StringLiteral",
-      "offset": 199,
-      "length": 8,
-      "value": "\"2.2.15\""
-    },
-    {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "StringLiteral",
       "offset": 6317,
@@ -497,20 +459,6 @@
       "offset": 6411,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
-      "kind": "StringLiteral",
-      "offset": 165,
-      "length": 10,
-      "value": "\"2.2.15.0\""
-    },
-    {
-      "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
-      "kind": "StringLiteral",
-      "offset": 209,
-      "length": 6,
-      "value": "\"1002\""
     }
   ]
 }

@@ -14,4 +14,3 @@ public struct SdkVersion {
   public static let sdkVersion: Swift.String
   public static let buildNum: Swift.String
 }
-public let sdkVersion: Swift.String
