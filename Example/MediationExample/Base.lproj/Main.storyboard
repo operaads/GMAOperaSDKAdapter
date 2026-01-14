@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rAm-Wo-R20">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ad Source Selection-->
+        <scene sceneID="S1W-Pp-4R6">
+            <objects>
+                <tableViewController title="Ad Source Selection" id="RYH-6a-7v8" customClass="StartViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GeU-fR-ich">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Select Ad Source" id="YJb-Rr-UdG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="erQ-V6-exu" style="IBUITableViewCellStyleDefault" id="Epk-DD-3tB">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Epk-DD-3tB" id="u8E-9z-tfa">
+                                            <rect key="frame" x="0.0" y="0.0" width="383.66666666666669" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Objective-C Custom Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="erQ-V6-exu">
+                                                    <rect key="frame" x="20" y="0.0" width="355.66666666666669" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="XI1-er-efF" style="IBUITableViewCellStyleDefault" id="OlR-NM-Tk0">
+                                        <rect key="frame" x="0.0" y="94" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OlR-NM-Tk0" id="lPA-gU-Da5">
+                                            <rect key="frame" x="0.0" y="0.0" width="383.66666666666669" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Swift Custom Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XI1-er-efF">
+                                                    <rect key="frame" x="20" y="0.0" width="355.66666666666669" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="RYH-6a-7v8" id="H0n-gC-39h"/>
+                            <outlet property="delegate" destination="RYH-6a-7v8" id="b0c-c5-aui"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="ebm-0b-Zpg">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="VJ3-KT-VJc"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P34-v6-iS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-951" y="244"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fYD-hB-e7W">
+            <objects>
+                <navigationController id="rAm-Wo-R20" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VlV-Sc-dmt">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RYH-6a-7v8" kind="relationship" relationship="rootViewController" id="Sch-6r-Lv2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sg-ss-J2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1710" y="244"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UXH-Ju-soV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kms-dC-9eh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKW-3T-w7p">
+                                <rect key="frame" x="0.0" y="20" width="600" height="980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-6a-E7E" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="723.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TY-VH-xWf">
+                                                <rect key="frame" x="273" y="16" width="54" height="20.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTQ-3Q-Jeg" userLabel="Custom Event Banner View" customClass="GADBannerView">
+                                                <rect key="frame" x="140" y="44.666666666666671" width="320" height="50"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="ELn-vt-3fz"/>
+                                                    <constraint firstAttribute="height" constant="50" id="KMQ-bp-xno"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB9-Zj-jbO" userLabel="App Open Button">
+                                                <rect key="frame" x="233.66666666666663" y="124.66666666666666" width="133" height="30"/>
+                                                <state key="normal" title="Show App Open Ad">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showAppOpen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UGY-6g-e7c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsW-uQ-1nh">
+                                                <rect key="frame" x="234" y="184.66666666666666" width="132" height="30"/>
+                                                <state key="normal" title="Show Interstitial Ad">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpe-oJ-yvz"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOi-Qx-VWk">
+                                                <rect key="frame" x="26" y="184" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Load intersitial">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJm-jf-Siv"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-aZ-FFo">
+                                                <rect key="frame" x="23" y="573" width="106" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Load Rewarded">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadRewarded:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRh-PS-Il9"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jek-TP-hng">
+                                                <rect key="frame" x="35" y="235" width="82" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Load Native">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadNativeAd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NUD-fe-UQ8"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWJ-t3-Qc8">
+                                                <rect key="frame" x="263" y="244.66666666666669" width="74" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xk-3s-XIj" userLabel="Custom Event Native Ad View">
+                                                <rect key="frame" x="0.0" y="273.66666666666669" width="600" height="220"/>
+                                                <color key="backgroundColor" red="0.91510811240000001" green="0.91510811240000001" blue="0.91510811240000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="220" id="zgc-SI-rrk"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-nW-gjz">
+                                                <rect key="frame" x="238.66666666666663" y="513.33333333333337" width="123" height="30"/>
+                                                <state key="normal" title="Refresh Native Ad"/>
+                                                <connections>
+                                                    <action selector="refreshNativeAd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ri-fv-zcR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-wO-csq">
+                                                <rect key="frame" x="233.66666666666663" y="573.33333333333337" width="133" height="30"/>
+                                                <state key="normal" title="Show Rewarded Ad"/>
+                                                <connections>
+                                                    <action selector="showRewarded:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bs1-fk-x7N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ze-MP-g1r" userLabel="Rewarded Interstitial Button">
+                                                <rect key="frame" x="197.66666666666663" y="633.33333333333337" width="205" height="30"/>
+                                                <state key="normal" title="Show Rewarded Interstitial Ad"/>
+                                                <connections>
+                                                    <action selector="showRewardedInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anw-IP-4nT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG2-DQ-KBD">
+                                                <rect key="frame" x="33" y="11" width="87" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Load Banner">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadBanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIR-GA-2h9"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smZ-c3-t2f">
+                                                <rect key="frame" x="21" y="124" width="112" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Load AppoOpen">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadAppOpen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y9Y-i3-tHI"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gur-PZ-MDV">
+                                                <rect key="frame" x="8" y="633" width="138" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Load RewardedInter">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadRewardedInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdK-R4-UQb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="jB9-Zj-jbO" firstAttribute="top" secondItem="jTQ-3Q-Jeg" secondAttribute="bottom" constant="30" id="2Bj-Fx-wZZ"/>
+                                            <constraint firstAttribute="centerX" secondItem="OsW-uQ-1nh" secondAttribute="centerX" id="9Fb-Ha-9Wy"/>
+                                            <constraint firstItem="4TY-VH-xWf" firstAttribute="top" secondItem="1tL-6a-E7E" secondAttribute="top" constant="16" id="9LN-5A-B2N"/>
+                                            <constraint firstItem="hSV-wO-csq" firstAttribute="centerX" secondItem="1tL-6a-E7E" secondAttribute="centerX" id="9QP-wy-Vxv"/>
+                                            <constraint firstItem="9Ze-MP-g1r" firstAttribute="top" secondItem="hSV-wO-csq" secondAttribute="bottom" constant="30" id="Heb-sA-pzU"/>
+                                            <constraint firstItem="lWJ-t3-Qc8" firstAttribute="top" secondItem="OsW-uQ-1nh" secondAttribute="bottom" constant="30" id="Oq8-Ji-ELE"/>
+                                            <constraint firstItem="hSV-wO-csq" firstAttribute="top" secondItem="zMQ-nW-gjz" secondAttribute="bottom" constant="30" id="RKm-HC-Pcs"/>
+                                            <constraint firstAttribute="centerX" secondItem="jTQ-3Q-Jeg" secondAttribute="centerX" id="TUN-Fz-dnb"/>
+                                            <constraint firstItem="jTQ-3Q-Jeg" firstAttribute="top" secondItem="4TY-VH-xWf" secondAttribute="bottom" constant="8" id="bGa-q9-GrR"/>
+                                            <constraint firstAttribute="centerX" secondItem="6Xk-3s-XIj" secondAttribute="centerX" id="eha-Jx-Ki9"/>
+                                            <constraint firstAttribute="centerX" secondItem="lWJ-t3-Qc8" secondAttribute="centerX" id="f0A-TO-Dcr"/>
+                                            <constraint firstItem="6Xk-3s-XIj" firstAttribute="top" secondItem="lWJ-t3-Qc8" secondAttribute="bottom" constant="8" id="gud-OW-rnl"/>
+                                            <constraint firstAttribute="centerX" secondItem="4TY-VH-xWf" secondAttribute="centerX" id="hzw-13-MTx"/>
+                                            <constraint firstItem="zMQ-nW-gjz" firstAttribute="top" secondItem="6Xk-3s-XIj" secondAttribute="bottom" constant="19.670000000000002" id="i6g-lj-JoR"/>
+                                            <constraint firstItem="6Xk-3s-XIj" firstAttribute="leading" secondItem="1tL-6a-E7E" secondAttribute="leading" id="mD2-Ex-xrx"/>
+                                            <constraint firstItem="zMQ-nW-gjz" firstAttribute="centerX" secondItem="1tL-6a-E7E" secondAttribute="centerX" id="mtg-Lq-0AK"/>
+                                            <constraint firstItem="OsW-uQ-1nh" firstAttribute="top" secondItem="jB9-Zj-jbO" secondAttribute="bottom" constant="30" id="p4p-fI-SzI"/>
+                                            <constraint firstItem="9Ze-MP-g1r" firstAttribute="centerX" secondItem="1tL-6a-E7E" secondAttribute="centerX" id="qwA-xt-eWT"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Xk-3s-XIj" secondAttribute="trailing" id="tLb-ss-f8r"/>
+                                            <constraint firstItem="jB9-Zj-jbO" firstAttribute="centerX" secondItem="1tL-6a-E7E" secondAttribute="centerX" id="tnB-X8-SYe"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Ze-MP-g1r" secondAttribute="bottom" constant="60" id="xOc-i0-39n"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1tL-6a-E7E" firstAttribute="leading" secondItem="nKW-3T-w7p" secondAttribute="leading" id="NlW-uL-poi"/>
+                                    <constraint firstItem="1tL-6a-E7E" firstAttribute="width" secondItem="nKW-3T-w7p" secondAttribute="width" id="Tou-WS-qMz"/>
+                                    <constraint firstAttribute="bottom" secondItem="1tL-6a-E7E" secondAttribute="bottom" id="ZIy-ic-89s"/>
+                                    <constraint firstAttribute="trailing" secondItem="1tL-6a-E7E" secondAttribute="trailing" id="rB4-mj-AqZ"/>
+                                    <constraint firstItem="1tL-6a-E7E" firstAttribute="top" secondItem="nKW-3T-w7p" secondAttribute="top" id="uAV-ZG-dFv"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nKW-3T-w7p" firstAttribute="top" secondItem="UXH-Ju-soV" secondAttribute="bottom" id="2PG-Fe-ZAO"/>
+                            <constraint firstItem="nKW-3T-w7p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KvV-hy-raK"/>
+                            <constraint firstAttribute="trailing" secondItem="nKW-3T-w7p" secondAttribute="trailing" id="Ssz-9v-Dac"/>
+                            <constraint firstItem="nKW-3T-w7p" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ebS-Ze-R6Z"/>
+                            <constraint firstItem="Kms-dC-9eh" firstAttribute="top" secondItem="nKW-3T-w7p" secondAttribute="bottom" id="kpd-g9-Tn8"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="appOpenButton" destination="jB9-Zj-jbO" id="eEw-AQ-ZBc"/>
+                        <outlet property="bannerAdView" destination="jTQ-3Q-Jeg" id="iXw-b7-von"/>
+                        <outlet property="interstitialButton" destination="OsW-uQ-1nh" id="BFn-78-3ox"/>
+                        <outlet property="nativeAdPlaceholder" destination="6Xk-3s-XIj" id="yHz-dR-NIh"/>
+                        <outlet property="rewardedButton" destination="hSV-wO-csq" id="2Rn-d9-WY2"/>
+                        <outlet property="rewardedInterstitialButton" destination="9Ze-MP-g1r" id="dzK-RU-Af3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="244"/>
+        </scene>
+    </scenes>
+</document>
