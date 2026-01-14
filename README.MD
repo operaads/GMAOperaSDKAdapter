@@ -33,7 +33,7 @@ target 'YourProjectTarget' do
     pod 'Google-Mobile-Ads-SDK',    '~>12.8.0'
 
     # 添加 Opera 聚合适配器
-    pod 'GMAOperaSDKAdapter'
+    pod 'GMAOperaSDKAdapter', '2.2.16.1'
 end
 运行安装命令：
 
