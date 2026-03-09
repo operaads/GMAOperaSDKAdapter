@@ -1,25 +1,25 @@
 # GMAOperaSDKAdapter
 
-Opera Ads SDK 的 Google Mobile Ads (AdMob) 聚合平台自定义适配器。
+Custom adapter for integrating Opera Ads SDK with Google Mobile Ads (AdMob) mediation platform.
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/GMAOperaSDKAdapter.svg)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
 [![Platform](https://img.shields.io/cocoapods/p/GMAOperaSDKAdapter.svg?style=flat)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
 [![License](https://img.shields.io/cocoapods/l/GMAOperaSDKAdapter.svg?style=flat)](https://github.com/luanchen/GMAOperaSDKAdapter/blob/main/LICENSE)
 
-[English](README_EN.MD) | 简体中文
+English | [简体中文](README.MD)
 
-## 概述
+## Overview
 
-GMAOperaSDKAdapter 是一个自定义聚合适配器，使 Opera Advertising SDK (OpAdxSdk) 能够与 Google Mobile Ads (AdMob) 聚合平台无缝集成。该适配器将 Opera Ads SDK 的回调桥接到 AdMob 的聚合回调，实现通过 AdMob 平台进行广告投放。
+GMAOperaSDKAdapter is a custom mediation adapter that enables seamless integration of Opera Advertising SDK (OpAdxSdk) with the Google Mobile Ads (AdMob) mediation platform. This adapter bridges Opera Ads SDK callbacks to AdMob mediation callbacks, enabling ad serving through the AdMob platform.
 
-## 支持的广告格式
+## Supported Ad Formats
 
-- ✅ Banner 广告（标准、自适应）
-- ✅ 插屏广告（Interstitial）
-- ✅ 激励广告（Rewarded）
-- ✅ 原生广告（Native）
+- ✅ Banner Ads (Standard, Adaptive)
+- ✅ Interstitial Ads
+- ✅ Rewarded Ads
+- ✅ Native Ads
 
-## 版本要求
+## Requirements
 
 - iOS 13.0+
 - Google Mobile Ads SDK 12.8.0+
@@ -27,41 +27,41 @@ GMAOperaSDKAdapter 是一个自定义聚合适配器，使 Opera Advertising SDK
 - Xcode 13.0+
 - Swift 5.0+
 
-## 安装
+## Installation
 
 ### CocoaPods
 
-在您的 `Podfile` 中添加：
+Add the following to your `Podfile`:
 
 ```ruby
 # Google Mobile Ads SDK
 pod 'Google-Mobile-Ads-SDK', '~> 12.8'
 
 # Opera Ads SDK
-pod 'OpAdxSdk', '~> 2.8.1'
+pod 'OpAdxSdk', '~> 2.8.0'
 
-# Opera Ads AdMob 适配器
-pod 'GMAOperaSDKAdapter', '~> 2.8.1.0'
+# Opera Ads AdMob Adapter
+pod 'GMAOperaSDKAdapter', '~> 2.8.1'
 ```
 
-然后运行：
+Then run:
 
 ```bash
 pod install
 ```
 
-## 快速开始
+## Quick Start
 
-### 1. 初始化 Google Mobile Ads SDK
+### 1. Initialize Google Mobile Ads SDK
 
 ```swift
 import GoogleMobileAds
 
-// 在 AppDelegate 中初始化
+// Initialize in AppDelegate
 func application(_ application: UIApplication, 
                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    // 初始化 Google Mobile Ads SDK
+    // Initialize Google Mobile Ads SDK
     GADMobileAds.sharedInstance().start { status in
         print("Google Mobile Ads SDK initialized")
     }
@@ -70,21 +70,21 @@ func application(_ application: UIApplication,
 }
 ```
 
-### 2. 配置自定义广告事件
+### 2. Configure Custom Event
 
-在 AdMob 后台配置广告单元时：
+When configuring ad units in AdMob dashboard:
 
-1. 选择"聚合"(Mediation) 
-2. 添加"自定义事件"(Custom Event)
-3. 配置参数：
+1. Select "Mediation"
+2. Add "Custom Event"
+3. Configure parameters:
 
-**类名（Class Name）**：
+**Class Name**:
 - Banner: `OpAdxAdmobBannerAd`
 - Interstitial: `OpAdxAdmobInterstitialAd`
 - Rewarded: `OpAdxAdmobRewardedAd`
 - Native: `OpAdxAdmobNativeAd`
 
-**参数（Parameter）** - JSON格式：
+**Parameter** - JSON format:
 ```json
 {
   "appId": "your_opera_app_id",
@@ -93,11 +93,11 @@ func application(_ application: UIApplication,
 }
 ```
 
-### 3. 加载和展示广告
+### 3. Load and Show Ads
 
-使用 Google Mobile Ads 标准 API 加载和展示广告：
+Use Google Mobile Ads standard APIs to load and show ads:
 
-#### Banner 广告
+#### Banner Ads
 
 ```swift
 import GoogleMobileAds
@@ -112,23 +112,23 @@ class BannerViewController: UIViewController {
         bannerView.delegate = self
         bannerView.load(GADRequest())
         
-        // 添加到视图
+        // Add to view
         view.addSubview(bannerView)
     }
 }
 
 extension BannerViewController: GADBannerViewDelegate {
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("Banner 加载成功")
+        print("Banner loaded successfully")
     }
     
     func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-        print("Banner 加载失败: \(error.localizedDescription)")
+        print("Banner failed to load: \(error.localizedDescription)")
     }
 }
 ```
 
-#### 插屏广告
+#### Interstitial Ads
 
 ```swift
 import GoogleMobileAds
@@ -140,12 +140,12 @@ class InterstitialViewController: UIViewController {
         GADInterstitialAd.load(withAdUnitID: "your_admob_ad_unit_id",
                                request: GADRequest()) { [weak self] ad, error in
             if let error = error {
-                print("插屏广告加载失败: \(error.localizedDescription)")
+                print("Interstitial failed to load: \(error.localizedDescription)")
                 return
             }
             self?.interstitialAd = ad
             self?.interstitialAd?.fullScreenContentDelegate = self
-            print("插屏广告加载成功")
+            print("Interstitial loaded successfully")
         }
     }
     
@@ -158,21 +158,21 @@ class InterstitialViewController: UIViewController {
 
 extension InterstitialViewController: GADFullScreenContentDelegate {
     func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("插屏广告展示")
+        print("Interstitial presented")
     }
     
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print("插屏广告展示失败: \(error.localizedDescription)")
+        print("Interstitial failed to present: \(error.localizedDescription)")
     }
     
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("插屏广告关闭")
+        print("Interstitial dismissed")
         interstitialAd = nil
     }
 }
 ```
 
-#### 激励广告
+#### Rewarded Ads
 
 ```swift
 import GoogleMobileAds
@@ -184,12 +184,12 @@ class RewardedViewController: UIViewController {
         GADRewardedAd.load(withAdUnitID: "your_admob_ad_unit_id",
                            request: GADRequest()) { [weak self] ad, error in
             if let error = error {
-                print("激励广告加载失败: \(error.localizedDescription)")
+                print("Rewarded ad failed to load: \(error.localizedDescription)")
                 return
             }
             self?.rewardedAd = ad
             self?.rewardedAd?.fullScreenContentDelegate = self
-            print("激励广告加载成功")
+            print("Rewarded ad loaded successfully")
         }
     }
     
@@ -197,7 +197,7 @@ class RewardedViewController: UIViewController {
         if let ad = rewardedAd {
             ad.present(fromRootViewController: self) {
                 let reward = ad.adReward
-                print("用户获得奖励: \(reward.amount) \(reward.type)")
+                print("User earned reward: \(reward.amount) \(reward.type)")
             }
         }
     }
@@ -205,13 +205,13 @@ class RewardedViewController: UIViewController {
 
 extension RewardedViewController: GADFullScreenContentDelegate {
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("激励广告关闭")
+        print("Rewarded ad dismissed")
         rewardedAd = nil
     }
 }
 ```
 
-#### 原生广告
+#### Native Ads
 
 ```swift
 import GoogleMobileAds
@@ -231,15 +231,15 @@ class NativeViewController: UIViewController {
 
 extension NativeViewController: GADNativeAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
-        print("原生广告加载成功")
+        print("Native ad loaded successfully")
         
-        // 创建自定义原生广告视图
+        // Create custom native ad view
         let nativeAdView = createNativeAdView()
         
-        // 绑定广告数据
+        // Bind ad data
         nativeAdView.nativeAd = nativeAd
         
-        // 设置广告元素
+        // Set ad elements
         (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
         (nativeAdView.bodyView as? UILabel)?.text = nativeAd.body
         (nativeAdView.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
@@ -252,38 +252,38 @@ extension NativeViewController: GADNativeAdLoaderDelegate {
             mediaView.mediaContent = nativeAd.mediaContent
         }
         
-        // 添加到视图
+        // Add to view
         view.addSubview(nativeAdView)
     }
     
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-        print("原生广告加载失败: \(error.localizedDescription)")
+        print("Native ad failed to load: \(error.localizedDescription)")
     }
 }
 ```
 
-## 适配器架构
+## Adapter Architecture
 
-### 核心组件
+### Core Components
 
 ```
 OpAdxAdapterAdmob/
-├── SdkVersion.swift                     # 适配器版本号
-├── OpAdxAdmobMediationAdapter.swift     # 主适配器类
-├── OpAdxAdmobInitializer.swift          # SDK初始化管理
-├── OpAdxAdmobUtils.swift                # 工具类
-├── OpAdxAdmobConstants.swift            # 常量定义
-├── OpAdxAdmobServerParameter.swift      # 服务器参数解析
-├── OpAdxAdmobBannerAd.swift            # Banner适配器
-├── OpAdxAdmobInterstitialAd.swift      # Interstitial适配器
-├── OpAdxAdmobRewardedAd.swift          # Rewarded适配器
-└── OpAdxAdmobNativeAd.swift            # Native适配器
+├── SdkVersion.swift                     # Adapter version
+├── OpAdxAdmobMediationAdapter.swift     # Main adapter class
+├── OpAdxAdmobInitializer.swift          # SDK initialization manager
+├── OpAdxAdmobUtils.swift                # Utility class
+├── OpAdxAdmobConstants.swift            # Constants
+├── OpAdxAdmobServerParameter.swift      # Server parameter parser
+├── OpAdxAdmobBannerAd.swift            # Banner adapter
+├── OpAdxAdmobInterstitialAd.swift      # Interstitial adapter
+├── OpAdxAdmobRewardedAd.swift          # Rewarded adapter
+└── OpAdxAdmobNativeAd.swift            # Native adapter
 ```
 
-### 回调映射
+### Callback Mapping
 
-| Opera Ads SDK 回调 | Google Mobile Ads 回调 |
-|-------------------|----------------------|
+| Opera Ads SDK Callback | Google Mobile Ads Callback |
+|------------------------|---------------------------|
 | `onAdLoaded` | `completionHandler(self, nil)` |
 | `onAdFailedToLoad` | `completionHandler(nil, error)` |
 | `onAdDisplayed` | `willPresentFullScreenView()` + `reportImpression()` |
@@ -292,122 +292,122 @@ OpAdxAdapterAdmob/
 | `onAdFailedToShow` | `didFailToPresentWithError()` |
 | `didRewardUser` | `didRewardUser()` |
 
-### 原生广告特性
+### Native Ad Features
 
-适配器实现了以下原生广告协议方法：
+The adapter implements the following native ad protocol methods:
 
 ```swift
-// 告诉 AdMob 由 Opera SDK 处理曝光追踪
+// Tell AdMob that Opera SDK handles impression tracking
 func handlesUserImpressions() -> Bool {
     return true
 }
 
-// 告诉 AdMob 由 Opera SDK 处理点击追踪
+// Tell AdMob that Opera SDK handles click tracking
 func handlesUserClicks() -> Bool {
     return true
 }
 
-// AdChoices 视图由 Opera SDK 自动添加
+// AdChoices view is automatically added by Opera SDK
 var adChoicesView: UIView? {
     return nil
 }
 ```
 
-## 版本历史
+## Release Notes
 
 ### 2.8.1.0 (2026-03-09)
-- ✅ 支持 Google Mobile Ads SDK 12.8+
-- ✅ 添加原生广告追踪控制方法
-- ✅ 优化全屏广告生命周期回调顺序
-- ✅ 完善错误处理和日志
-- ✅ 支持所有主流广告格式
+- ✅ Support for Google Mobile Ads SDK 12.8+
+- ✅ Added native ad tracking control methods
+- ✅ Optimized full-screen ad lifecycle callback order
+- ✅ Improved error handling and logging
+- ✅ Support for all mainstream ad formats
 
 ### 2.8.0.0
-- 初始版本
-- 支持 Banner、Interstitial、Rewarded、Native 广告格式
+- Initial release
+- Support for Banner, Interstitial, Rewarded, and Native ad formats
 
-## 注意事项
+## Important Notes
 
-### 1. 初始化顺序
-Opera Ads SDK 会在首次加载广告时自动初始化，无需手动初始化。
+### 1. Initialization Order
+Opera Ads SDK automatically initializes on first ad load, no manual initialization required.
 
-### 2. 回调顺序
-适配器严格遵循 Google 文档推荐的回调顺序：
+### 2. Callback Order
+The adapter strictly follows Google's recommended callback order:
 
-**插屏广告和激励广告展示**：
-1. `willPresentFullScreenView()` - 即将展示全屏视图
-2. `reportImpression()` - 报告曝光
-3. 对于激励广告：`didStartVideo()` - 视频开始播放
+**Interstitial and Rewarded Ad Display**:
+1. `willPresentFullScreenView()` - About to present full screen view
+2. `reportImpression()` - Report impression
+3. For rewarded ads: `didStartVideo()` - Video started
 
-**插屏广告和激励广告关闭**：
-1. 对于激励广告：`didEndVideo()` - 视频结束播放
-2. `willDismissFullScreenView()` - 即将关闭全屏视图
-3. `didDismissFullScreenView()` - 已关闭全屏视图
+**Interstitial and Rewarded Ad Dismissal**:
+1. For rewarded ads: `didEndVideo()` - Video ended
+2. `willDismissFullScreenView()` - About to dismiss full screen view
+3. `didDismissFullScreenView()` - Dismissed full screen view
 
-### 3. 原生广告渲染
-原生广告的曝光和点击由 Opera Ads SDK 自动追踪，AdMob 会通过以下方法确认：
-- `handlesUserImpressions()` 返回 `true`
-- `handlesUserClicks()` 返回 `true`
+### 3. Native Ad Rendering
+Native ad impressions and clicks are automatically tracked by Opera Ads SDK, confirmed via:
+- `handlesUserImpressions()` returns `true`
+- `handlesUserClicks()` returns `true`
 
-### 4. 错误处理
-所有错误都会通过 AdMob 的标准错误回调返回，包含详细的错误信息。
+### 4. Error Handling
+All errors are returned through AdMob's standard error callbacks with detailed error information.
 
-## 调试
+## Debugging
 
-### 启用日志
+### Enable Logging
 
 ```swift
-// Google Mobile Ads 日志
+// Google Mobile Ads logging
 GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = 
     [GADSimulatorID]
 
-// Opera Ads SDK 日志（在 SDK 初始化前设置）
-// 详见 OpAdxSdk 文档
+// Opera Ads SDK logging (set before SDK initialization)
+// See OpAdxSdk documentation for details
 ```
 
-### 测试广告
+### Test Ads
 
-使用 AdMob 测试广告单元 ID 进行测试：
+Use AdMob test ad unit IDs for testing:
 - Banner: `ca-app-pub-3940256099942544/2934735716`
 - Interstitial: `ca-app-pub-3940256099942544/4411468910`
 - Rewarded: `ca-app-pub-3940256099942544/1712485313`
 - Native: `ca-app-pub-3940256099942544/3986624511`
 
-### 常见问题
+### Common Issues
 
-**Q: 广告无法加载？**
-A: 检查以下项：
-1. AdMob 后台自定义事件配置的类名和参数是否正确
-2. Opera Ads SDK 是否成功初始化
-3. 查看日志中的详细错误信息
+**Q: Ads not loading?**
+A: Check the following:
+1. Verify custom event class name and parameters in AdMob dashboard
+2. Ensure Opera Ads SDK is successfully initialized
+3. Review detailed error messages in logs
 
-**Q: 类名找不到？**
-A: 确保：
-1. `GMAOperaSDKAdapter` Pod 已正确安装
-2. 使用完整类名，例如 `OpAdxAdmobBannerAd`
-3. 清理并重新构建项目
+**Q: Class not found?**
+A: Make sure:
+1. `GMAOperaSDKAdapter` Pod is correctly installed
+2. Use full class name, e.g., `OpAdxAdmobBannerAd`
+3. Clean and rebuild project
 
-**Q: 原生广告点击无效？**
-A: 确保正确设置了 `GADNativeAdView` 的所有可点击视图。
+**Q: Native ad clicks not working?**
+A: Ensure all clickable views are properly set on `GADNativeAdView`.
 
-## 示例项目
+## Sample Project
 
-完整的示例项目请参考：
+For complete sample projects, see:
 - [OpAdxSDK Demo - AdMob Adapter](https://github.com/operaads/iOS-sdk/tree/main/Demo/AdmobAdapter)
 
-## 技术支持
+## Support
 
 - 📧 Email: chenl@opera.com
-- 📖 文档: [Opera Ads iOS SDK 文档]
-- 🐛 问题反馈: [GitHub Issues](https://github.com/luanchen/GMAOperaSDKAdapter/issues)
+- 📖 Documentation: [Opera Ads iOS SDK Documentation]
+- 🐛 Issue Tracker: [GitHub Issues](https://github.com/luanchen/GMAOperaSDKAdapter/issues)
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 相关链接
+## Related Links
 
 - [Opera Ads SDK](https://github.com/operaads/iOS-sdk)
 - [Google Mobile Ads SDK](https://developers.google.com/admob/ios/quick-start)
-- [AdMob 自定义事件文档](https://developers.google.com/admob/ios/custom-events)
+- [AdMob Custom Events Documentation](https://developers.google.com/admob/ios/custom-events)
 - [CocoaPods](https://cocoapods.org/pods/GMAOperaSDKAdapter)
