@@ -4,7 +4,7 @@ Custom adapter for integrating Opera Ads SDK with Google Mobile Ads (AdMob) medi
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/GMAOperaSDKAdapter.svg)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
 [![Platform](https://img.shields.io/cocoapods/p/GMAOperaSDKAdapter.svg?style=flat)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
-[![License](https://img.shields.io/cocoapods/l/GMAOperaSDKAdapter.svg?style=flat)](https://github.com/luanchen/GMAOperaSDKAdapter/blob/main/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/GMAOperaSDKAdapter.svg?style=flat)](https://github.com/operaads/GMAOperaSDKAdapter/blob/main/LICENSE)
 
 English | [简体中文](README.MD)
 
@@ -23,7 +23,7 @@ GMAOperaSDKAdapter is a custom mediation adapter that enables seamless integrati
 
 - iOS 13.0+
 - Google Mobile Ads SDK 12.8.0+
-- OpAdxSdk 2.8.0+
+- OpAdxSdk 2.8.1
 - Xcode 13.0+
 - Swift 5.0+
 
@@ -38,10 +38,10 @@ Add the following to your `Podfile`:
 pod 'Google-Mobile-Ads-SDK', '~> 12.8'
 
 # Opera Ads SDK
-pod 'OpAdxSdk', '~> 2.8.0'
+pod 'OpAdxSdk', '2.8.1'
 
 # Opera Ads AdMob Adapter
-pod 'GMAOperaSDKAdapter', '~> 2.8.1'
+pod 'GMAOperaSDKAdapter', '2.8.1.0'
 ```
 
 Then run:
@@ -84,6 +84,7 @@ When configuring ad units in AdMob dashboard:
 - Rewarded: `OpAdxAdmobRewardedAd`
 - Native: `OpAdxAdmobNativeAd`
 
+"Edit mediation group" -> "Edit ad unit mapping"
 **Parameter** - JSON format:
 ```json
 {
@@ -92,6 +93,8 @@ When configuring ad units in AdMob dashboard:
   "placementId": "your_opera_placement_id"
 }
 ```
+
+{"bundleId":"xxxxxxxxxx", "appId":"pubxxxxxxxxxxxxxx/epxxxxxxxxxxxxxx/appxxxxxxxxxxxxxx", "placementId": "xxxxxxxxxxxxxxx" }
 
 ### 3. Load and Show Ads
 
@@ -399,7 +402,7 @@ For complete sample projects, see:
 
 - 📧 Email: chenl@opera.com
 - 📖 Documentation: [Opera Ads iOS SDK Documentation]
-- 🐛 Issue Tracker: [GitHub Issues](https://github.com/luanchen/GMAOperaSDKAdapter/issues)
+- 🐛 Issue Tracker: [GitHub Issues](https://github.com/operaads/GMAOperaSDKAdapter/issues)
 
 ## License
 

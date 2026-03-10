@@ -4,7 +4,7 @@ Opera Ads SDK 的 Google Mobile Ads (AdMob) 聚合平台自定义适配器。
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/GMAOperaSDKAdapter.svg)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
 [![Platform](https://img.shields.io/cocoapods/p/GMAOperaSDKAdapter.svg?style=flat)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
-[![License](https://img.shields.io/cocoapods/l/GMAOperaSDKAdapter.svg?style=flat)](https://github.com/luanchen/GMAOperaSDKAdapter/blob/main/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/GMAOperaSDKAdapter.svg?style=flat)](https://github.com/operaads/GMAOperaSDKAdapter/blob/main/LICENSE)
 
 [English](README_EN.MD) | 简体中文
 
@@ -23,7 +23,7 @@ GMAOperaSDKAdapter 是一个自定义聚合适配器，使 Opera Advertising SDK
 
 - iOS 13.0+
 - Google Mobile Ads SDK 12.8.0+
-- OpAdxSdk 2.8.0+
+- OpAdxSdk 2.8.2
 - Xcode 13.0+
 - Swift 5.0+
 
@@ -38,10 +38,10 @@ GMAOperaSDKAdapter 是一个自定义聚合适配器，使 Opera Advertising SDK
 pod 'Google-Mobile-Ads-SDK', '~> 12.8'
 
 # Opera Ads SDK
-pod 'OpAdxSdk', '~> 2.8.1'
+pod 'OpAdxSdk', '2.8.2'
 
 # Opera Ads AdMob 适配器
-pod 'GMAOperaSDKAdapter', '~> 2.8.1.0'
+pod 'GMAOperaSDKAdapter', '2.8.2.0'
 ```
 
 然后运行：
@@ -84,6 +84,7 @@ func application(_ application: UIApplication,
 - Rewarded: `OpAdxAdmobRewardedAd`
 - Native: `OpAdxAdmobNativeAd`
 
+"Edit mediation group" -> "Edit ad unit mapping"
 **参数（Parameter）** - JSON格式：
 ```json
 {
@@ -92,6 +93,8 @@ func application(_ application: UIApplication,
   "placementId": "your_opera_placement_id"
 }
 ```
+
+{"bundleId":"xxxxxxxxxx", "appId":"pubxxxxxxxxxxxxxx/epxxxxxxxxxxxxxx/appxxxxxxxxxxxxxx", "placementId": "xxxxxxxxxxxxxxx" }
 
 ### 3. 加载和展示广告
 
@@ -399,7 +402,7 @@ A: 确保正确设置了 `GADNativeAdView` 的所有可点击视图。
 
 - 📧 Email: chenl@opera.com
 - 📖 文档: [Opera Ads iOS SDK 文档]
-- 🐛 问题反馈: [GitHub Issues](https://github.com/luanchen/GMAOperaSDKAdapter/issues)
+- 🐛 问题反馈: [GitHub Issues](https://github.com/operaads/GMAOperaSDKAdapter/issues)
 
 ## 许可证
 

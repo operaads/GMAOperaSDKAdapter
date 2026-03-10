@@ -47,6 +47,37 @@
       },
       {
         "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -421,28 +452,28 @@
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 6390,
+      "offset": 7803,
       "length": 40,
       "value": "\"OpAdxAdmobNativeAd - \""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 6426,
+      "offset": 7839,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 6429,
+      "offset": 7842,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 6514,
+      "offset": 7927,
       "length": 4,
       "value": "true"
     },
@@ -451,7 +482,7 @@
       "kind": "StringLiteral",
       "offset": 165,
       "length": 9,
-      "value": "\"2.8.1.0\""
+      "value": "\"2.8.2.0\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OperaAdxSDK\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",

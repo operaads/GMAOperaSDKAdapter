@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   # ――― 基本信息 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "GMAOperaSDKAdapter"
-  spec.version      = "2.8.1.0"
+  spec.version      = "2.8.2.0"
   spec.summary      = "Opera Ads Custom Adapter for Google Mobile Ads (AdMob) Mediation Platform."
   spec.description  = <<-DESC
     GMAOperaSDKAdapter is a custom mediation adapter that enables the integration of 
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
     enabling seamless ad serving through the AdMob platform.
   DESC
 
-  spec.homepage     = "https://github.com/luanchen/GMAOperaSDKAdapter"
+  spec.homepage     = "https://github.com/operaads/GMAOperaSDKAdapter"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Opera Ads" => "chenl@opera.com" }
 
@@ -27,8 +27,8 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
 
   # ――― 源码位置 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source       = { 
-    :git => "https://github.com/luanchen/GMAOperaSDKAdapter.git", 
+  spec.source       = {
+    :git => "https://github.com/operaads/GMAOperaSDKAdapter.git", 
     :tag => "#{spec.version}" 
   }
 
@@ -37,24 +37,25 @@ Pod::Spec.new do |spec|
   # 制作静态包的关键设置
   spec.static_framework = true
 
+  spec.vendored_frameworks = "OpAdxAdapterAdmob.xcframework"
   # 源码路径 - Swift源文件
-  spec.source_files  = "OpAdxAdapterAdmob/**/*.swift"
+  # spec.source_files  = "OpAdxAdapterAdmob/**/*.swift"
 
   # --- 依赖项 ---
   # Google Mobile Ads SDK - 要求12.8或更高版本
   spec.dependency 'Google-Mobile-Ads-SDK', '>= 12.8.0'
-  
+
   # Opera Ads SDK - 使用CocoaPods发布的版本
-  spec.dependency 'OpAdxSdk', '>= 2.8.0'
+  spec.dependency 'OpAdxSdk', '2.8.2'
 
   # ――― 工程配置 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # 静态库需要 -ObjC 标志以加载 Category
-  spec.pod_target_xcconfig = { 
-    'OTHER_LDFLAGS' => '-ObjC',
-    'VALID_ARCHS' => 'arm64 x86_64'
-  }
+  # spec.pod_target_xcconfig = { 
+  #   'OTHER_LDFLAGS' => '-ObjC',
+  #   'VALID_ARCHS' => 'arm64 x86_64'
+  # }
 
   # ――― 元数据 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.requires_arc = true
+  # spec.requires_arc = true
   
 end
