@@ -1,4 +1,5 @@
 # GMAOperaSDKAdapter
+# GMAOperaSDKAdapter
 
 Opera Ads SDK 的 Google Mobile Ads (AdMob) 聚合平台自定义适配器。
 
@@ -24,7 +25,7 @@ GMAOperaSDKAdapter 是一个自定义聚合适配器，使 Opera Advertising SDK
 
 - iOS 13.0+
 - Google Mobile Ads SDK 12.8.0+
-- OpAdxSdk 2.8.2
+- OpAdxSdk 2.8.3
 - Xcode 13.0+
 - Swift 5.0+
 
@@ -39,10 +40,10 @@ GMAOperaSDKAdapter 是一个自定义聚合适配器，使 Opera Advertising SDK
 pod 'Google-Mobile-Ads-SDK', '~> 12.8'
 
 # Opera Ads SDK
-pod 'OpAdxSdk', '2.8.2'
+pod 'OpAdxSdk', '2.8.3'
 
 # Opera Ads AdMob 适配器
-pod 'GMAOperaSDKAdapter', '2.8.2.0'
+pod 'GMAOperaSDKAdapter', '2.8.3.0'
 ```
 
 然后运行：
@@ -314,7 +315,10 @@ extension AppOpenViewController: GADFullScreenContentDelegate {
 
 ## 版本历史
 
-### 2.8.2.0 (2026-03-09)
+### 2.8.3.0 (2026-03-11)
+- 使用xcode(16.2)编译,提高兼容性
+
+### 2.8.2.0 (2026-03-10)
 - ✅ 支持 Google Mobile Ads SDK 12.8+
 - ✅ 添加开屏广告的支持
 - ✅ 优化全屏广告生命周期回调顺序

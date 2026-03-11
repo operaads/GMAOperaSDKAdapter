@@ -24,7 +24,7 @@ GMAOperaSDKAdapter is a custom mediation adapter that enables seamless integrati
 
 - iOS 13.0+
 - Google Mobile Ads SDK 12.8.0+
-- OpAdxSdk 2.8.2
+- OpAdxSdk 2.8.3
 - Xcode 13.0+
 - Swift 5.0+
 
@@ -39,10 +39,10 @@ Add the following to your `Podfile`:
 pod 'Google-Mobile-Ads-SDK', '~> 12.8'
 
 # Opera Ads SDK
-pod 'OpAdxSdk', '2.8.2'
+pod 'OpAdxSdk', '2.8.3'
 
 # Opera Ads AdMob Adapter
-pod 'GMAOperaSDKAdapter', '2.8.2.0'
+pod 'GMAOperaSDKAdapter', '2.8.3.0'
 ```
 
 Then run:
@@ -315,7 +315,10 @@ extension AppOpenViewController: GADFullScreenContentDelegate {
 
 ## Version History
 
-### 2.8.2.0 (2026-03-09)
+### 2.8.3.0 (2026-03-11)
+- Compiled using Xcode (16.2) to enhance compatibility
+
+### 2.8.2.0 (2026-03-10)
 - ✅ Support for Google Mobile Ads SDK 12.8+
 - ✅ Added App Open ad format support
 - ✅ Optimized full-screen ad lifecycle callback order
