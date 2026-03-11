@@ -18,6 +18,7 @@ GMAOperaSDKAdapter 是一个自定义聚合适配器，使 Opera Advertising SDK
 - ✅ 插屏广告（Interstitial）
 - ✅ 激励广告（Rewarded）
 - ✅ 原生广告（Native）
+- ✅ 开屏广告（AppOpen）
 
 ## 版本要求
 
@@ -74,17 +75,12 @@ func application(_ application: UIApplication,
 
 在 AdMob 后台配置广告单元时：
 
-1. 选择"聚合"(Mediation) 
-2. 添加"自定义事件"(Custom Event)
-3. 配置参数：
+Mediation -> "Edit mediation group" -> "Edit ad unit mapping" 
 
 **类名（Class Name）**：
-- Banner: `OpAdxAdmobBannerAd`
-- Interstitial: `OpAdxAdmobInterstitialAd`
-- Rewarded: `OpAdxAdmobRewardedAd`
-- Native: `OpAdxAdmobNativeAd`
+所有广告都只用这一个类名
+OpAdxAdmobMediationAdapter
 
-"Edit mediation group" -> "Edit ad unit mapping"
 **参数（Parameter）** - JSON格式：
 ```json
 {
@@ -93,8 +89,14 @@ func application(_ application: UIApplication,
   "placementId": "your_opera_placement_id"
 }
 ```
-
-{"bundleId":"xxxxxxxxxx", "appId":"pubxxxxxxxxxxxxxx/epxxxxxxxxxxxxxx/appxxxxxxxxxxxxxx", "placementId": "xxxxxxxxxxxxxxx" }
+Example:
+```json
+{
+  "bundleId": "xxxxxxxxxx",
+  "appId": "pubxxxxxxxxxxxxxx/epxxxxxxxxxxxxxx/appxxxxxxxxxxxxxx",
+  "placementId": "xxxxxxxxxxxxxxx"
+}
+```
 
 ### 3. 加载和展示广告
 
@@ -265,62 +267,56 @@ extension NativeViewController: GADNativeAdLoaderDelegate {
 }
 ```
 
-## 适配器架构
-
-### 核心组件
-
-```
-OpAdxAdapterAdmob/
-├── SdkVersion.swift                     # 适配器版本号
-├── OpAdxAdmobMediationAdapter.swift     # 主适配器类
-├── OpAdxAdmobInitializer.swift          # SDK初始化管理
-├── OpAdxAdmobUtils.swift                # 工具类
-├── OpAdxAdmobConstants.swift            # 常量定义
-├── OpAdxAdmobServerParameter.swift      # 服务器参数解析
-├── OpAdxAdmobBannerAd.swift            # Banner适配器
-├── OpAdxAdmobInterstitialAd.swift      # Interstitial适配器
-├── OpAdxAdmobRewardedAd.swift          # Rewarded适配器
-└── OpAdxAdmobNativeAd.swift            # Native适配器
-```
-
-### 回调映射
-
-| Opera Ads SDK 回调 | Google Mobile Ads 回调 |
-|-------------------|----------------------|
-| `onAdLoaded` | `completionHandler(self, nil)` |
-| `onAdFailedToLoad` | `completionHandler(nil, error)` |
-| `onAdDisplayed` | `willPresentFullScreenView()` + `reportImpression()` |
-| `onAdClicked` | `reportClick()` |
-| `onAdDismissed` | `willDismissFullScreenView()` + `didDismissFullScreenView()` |
-| `onAdFailedToShow` | `didFailToPresentWithError()` |
-| `didRewardUser` | `didRewardUser()` |
-
-### 原生广告特性
-
-适配器实现了以下原生广告协议方法：
+#### 开屏广告
 
 ```swift
-// 告诉 AdMob 由 Opera SDK 处理曝光追踪
-func handlesUserImpressions() -> Bool {
-    return true
+import GoogleMobileAds
+
+class AppOpenViewController: UIViewController {
+    var appOpenAd: GADAppOpenAd?
+
+    func loadAppOpenAd() {
+        GADAppOpenAd.load(withAdUnitID: "your_admob_ad_unit_id",
+                          request: GADRequest()) { [weak self] ad, error in
+            if let error = error {
+                print("开屏广告加载失败: \(error.localizedDescription)")
+                return
+            }
+            self?.appOpenAd = ad
+            self?.appOpenAd?.fullScreenContentDelegate = self
+            print("开屏广告加载成功")
+        }
+    }
+
+    func showAppOpenAd() {
+        if let ad = appOpenAd {
+            ad.present(fromRootViewController: self)
+        }
+    }
 }
 
-// 告诉 AdMob 由 Opera SDK 处理点击追踪
-func handlesUserClicks() -> Bool {
-    return true
-}
+extension AppOpenViewController: GADFullScreenContentDelegate {
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("开屏广告展示")
+    }
 
-// AdChoices 视图由 Opera SDK 自动添加
-var adChoicesView: UIView? {
-    return nil
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("开屏广告展示失败: \(error.localizedDescription)")
+    }
+
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("开屏广告关闭")
+        appOpenAd = nil
+    }
 }
 ```
+
 
 ## 版本历史
 
-### 2.8.1.0 (2026-03-09)
+### 2.8.2.0 (2026-03-09)
 - ✅ 支持 Google Mobile Ads SDK 12.8+
-- ✅ 添加原生广告追踪控制方法
+- ✅ 添加开屏广告的支持
 - ✅ 优化全屏广告生命周期回调顺序
 - ✅ 完善错误处理和日志
 - ✅ 支持所有主流广告格式
@@ -357,25 +353,6 @@ Opera Ads SDK 会在首次加载广告时自动初始化，无需手动初始化
 
 ## 调试
 
-### 启用日志
-
-```swift
-// Google Mobile Ads 日志
-GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = 
-    [GADSimulatorID]
-
-// Opera Ads SDK 日志（在 SDK 初始化前设置）
-// 详见 OpAdxSdk 文档
-```
-
-### 测试广告
-
-使用 AdMob 测试广告单元 ID 进行测试：
-- Banner: `ca-app-pub-3940256099942544/2934735716`
-- Interstitial: `ca-app-pub-3940256099942544/4411468910`
-- Rewarded: `ca-app-pub-3940256099942544/1712485313`
-- Native: `ca-app-pub-3940256099942544/3986624511`
-
 ### 常见问题
 
 **Q: 广告无法加载？**
@@ -387,8 +364,9 @@ A: 检查以下项：
 **Q: 类名找不到？**
 A: 确保：
 1. `GMAOperaSDKAdapter` Pod 已正确安装
-2. 使用完整类名，例如 `OpAdxAdmobBannerAd`
-3. 清理并重新构建项目
+2. 网站上类名已配置完成
+3. 使用完整类名，`OpAdxAdmobMediationAdapter`
+4. 清理并重新构建项目
 
 **Q: 原生广告点击无效？**
 A: 确保正确设置了 `GADNativeAdView` 的所有可点击视图。

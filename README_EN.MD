@@ -1,6 +1,6 @@
 # GMAOperaSDKAdapter
 
-Custom adapter for integrating Opera Ads SDK with Google Mobile Ads (AdMob) mediation platform.
+Custom mediation adapter for Opera Ads SDK integration with Google Mobile Ads (AdMob) platform.
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/GMAOperaSDKAdapter.svg)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
 [![Platform](https://img.shields.io/cocoapods/p/GMAOperaSDKAdapter.svg?style=flat)](https://cocoapods.org/pods/GMAOperaSDKAdapter)
@@ -10,7 +10,7 @@ English | [简体中文](README.MD)
 
 ## Overview
 
-GMAOperaSDKAdapter is a custom mediation adapter that enables seamless integration of Opera Advertising SDK (OpAdxSdk) with the Google Mobile Ads (AdMob) mediation platform. This adapter bridges Opera Ads SDK callbacks to AdMob mediation callbacks, enabling ad serving through the AdMob platform.
+GMAOperaSDKAdapter is a custom mediation adapter that enables seamless integration between Opera Advertising SDK (OpAdxSdk) and Google Mobile Ads (AdMob) mediation platform. This adapter bridges Opera Ads SDK callbacks to AdMob's mediation callbacks, enabling ad serving through the AdMob platform.
 
 ## Supported Ad Formats
 
@@ -18,12 +18,13 @@ GMAOperaSDKAdapter is a custom mediation adapter that enables seamless integrati
 - ✅ Interstitial Ads
 - ✅ Rewarded Ads
 - ✅ Native Ads
+- ✅ App Open Ads
 
 ## Requirements
 
 - iOS 13.0+
 - Google Mobile Ads SDK 12.8.0+
-- OpAdxSdk 2.8.1
+- OpAdxSdk 2.8.2
 - Xcode 13.0+
 - Swift 5.0+
 
@@ -38,10 +39,10 @@ Add the following to your `Podfile`:
 pod 'Google-Mobile-Ads-SDK', '~> 12.8'
 
 # Opera Ads SDK
-pod 'OpAdxSdk', '2.8.1'
+pod 'OpAdxSdk', '2.8.2'
 
 # Opera Ads AdMob Adapter
-pod 'GMAOperaSDKAdapter', '2.8.1.0'
+pod 'GMAOperaSDKAdapter', '2.8.2.0'
 ```
 
 Then run:
@@ -72,19 +73,14 @@ func application(_ application: UIApplication,
 
 ### 2. Configure Custom Event
 
-When configuring ad units in AdMob dashboard:
+When configuring ad units in AdMob console:
 
-1. Select "Mediation"
-2. Add "Custom Event"
-3. Configure parameters:
+Mediation -> "Edit mediation group" -> "Edit ad unit mapping"
 
 **Class Name**:
-- Banner: `OpAdxAdmobBannerAd`
-- Interstitial: `OpAdxAdmobInterstitialAd`
-- Rewarded: `OpAdxAdmobRewardedAd`
-- Native: `OpAdxAdmobNativeAd`
+Use this single class name for all ad formats:
+OpAdxAdmobMediationAdapter
 
-"Edit mediation group" -> "Edit ad unit mapping"
 **Parameter** - JSON format:
 ```json
 {
@@ -94,9 +90,16 @@ When configuring ad units in AdMob dashboard:
 }
 ```
 
-{"bundleId":"xxxxxxxxxx", "appId":"pubxxxxxxxxxxxxxx/epxxxxxxxxxxxxxx/appxxxxxxxxxxxxxx", "placementId": "xxxxxxxxxxxxxxx" }
+Example:
+```json
+{
+  "bundleId": "xxxxxxxxxx",
+  "appId": "pubxxxxxxxxxxxxxx/epxxxxxxxxxxxxxx/appxxxxxxxxxxxxxx",
+  "placementId": "xxxxxxxxxxxxxxx"
+}
+```
 
-### 3. Load and Show Ads
+### 3. Load and Display Ads
 
 Use Google Mobile Ads standard APIs to load and show ads:
 
@@ -265,65 +268,59 @@ extension NativeViewController: GADNativeAdLoaderDelegate {
 }
 ```
 
-## Adapter Architecture
-
-### Core Components
-
-```
-OpAdxAdapterAdmob/
-├── SdkVersion.swift                     # Adapter version
-├── OpAdxAdmobMediationAdapter.swift     # Main adapter class
-├── OpAdxAdmobInitializer.swift          # SDK initialization manager
-├── OpAdxAdmobUtils.swift                # Utility class
-├── OpAdxAdmobConstants.swift            # Constants
-├── OpAdxAdmobServerParameter.swift      # Server parameter parser
-├── OpAdxAdmobBannerAd.swift            # Banner adapter
-├── OpAdxAdmobInterstitialAd.swift      # Interstitial adapter
-├── OpAdxAdmobRewardedAd.swift          # Rewarded adapter
-└── OpAdxAdmobNativeAd.swift            # Native adapter
-```
-
-### Callback Mapping
-
-| Opera Ads SDK Callback | Google Mobile Ads Callback |
-|------------------------|---------------------------|
-| `onAdLoaded` | `completionHandler(self, nil)` |
-| `onAdFailedToLoad` | `completionHandler(nil, error)` |
-| `onAdDisplayed` | `willPresentFullScreenView()` + `reportImpression()` |
-| `onAdClicked` | `reportClick()` |
-| `onAdDismissed` | `willDismissFullScreenView()` + `didDismissFullScreenView()` |
-| `onAdFailedToShow` | `didFailToPresentWithError()` |
-| `didRewardUser` | `didRewardUser()` |
-
-### Native Ad Features
-
-The adapter implements the following native ad protocol methods:
+#### App Open Ads
 
 ```swift
-// Tell AdMob that Opera SDK handles impression tracking
-func handlesUserImpressions() -> Bool {
-    return true
+import GoogleMobileAds
+
+class AppOpenViewController: UIViewController {
+    var appOpenAd: GADAppOpenAd?
+
+    func loadAppOpenAd() {
+        GADAppOpenAd.load(withAdUnitID: "your_admob_ad_unit_id",
+                          request: GADRequest()) { [weak self] ad, error in
+            if let error = error {
+                print("App Open ad failed to load: \(error.localizedDescription)")
+                return
+            }
+            self?.appOpenAd = ad
+            self?.appOpenAd?.fullScreenContentDelegate = self
+            print("App Open ad loaded successfully")
+        }
+    }
+
+    func showAppOpenAd() {
+        if let ad = appOpenAd {
+            ad.present(fromRootViewController: self)
+        }
+    }
 }
 
-// Tell AdMob that Opera SDK handles click tracking
-func handlesUserClicks() -> Bool {
-    return true
-}
+extension AppOpenViewController: GADFullScreenContentDelegate {
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("App Open ad presented")
+    }
 
-// AdChoices view is automatically added by Opera SDK
-var adChoicesView: UIView? {
-    return nil
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("App Open ad failed to present: \(error.localizedDescription)")
+    }
+
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("App Open ad dismissed")
+        appOpenAd = nil
+    }
 }
 ```
 
-## Release Notes
 
-### 2.8.1.0 (2026-03-09)
+## Version History
+
+### 2.8.2.0 (2026-03-09)
 - ✅ Support for Google Mobile Ads SDK 12.8+
-- ✅ Added native ad tracking control methods
+- ✅ Added App Open ad format support
 - ✅ Optimized full-screen ad lifecycle callback order
-- ✅ Improved error handling and logging
-- ✅ Support for all mainstream ad formats
+- ✅ Enhanced error handling and logging
+- ✅ Support for all major ad formats
 
 ### 2.8.0.0
 - Initial release
@@ -332,20 +329,20 @@ var adChoicesView: UIView? {
 ## Important Notes
 
 ### 1. Initialization Order
-Opera Ads SDK automatically initializes on first ad load, no manual initialization required.
+Opera Ads SDK will automatically initialize on first ad load, no manual initialization required.
 
 ### 2. Callback Order
 The adapter strictly follows Google's recommended callback order:
 
-**Interstitial and Rewarded Ad Display**:
-1. `willPresentFullScreenView()` - About to present full screen view
+**Interstitial and Rewarded Ad Presentation**:
+1. `willPresentFullScreenView()` - About to present full-screen view
 2. `reportImpression()` - Report impression
-3. For rewarded ads: `didStartVideo()` - Video started
+3. For rewarded ads: `didStartVideo()` - Video started playing
 
 **Interstitial and Rewarded Ad Dismissal**:
 1. For rewarded ads: `didEndVideo()` - Video ended
-2. `willDismissFullScreenView()` - About to dismiss full screen view
-3. `didDismissFullScreenView()` - Dismissed full screen view
+2. `willDismissFullScreenView()` - About to dismiss full-screen view
+3. `didDismissFullScreenView()` - Full-screen view dismissed
 
 ### 3. Native Ad Rendering
 Native ad impressions and clicks are automatically tracked by Opera Ads SDK, confirmed via:
@@ -355,50 +352,32 @@ Native ad impressions and clicks are automatically tracked by Opera Ads SDK, con
 ### 4. Error Handling
 All errors are returned through AdMob's standard error callbacks with detailed error information.
 
-## Debugging
-
-### Enable Logging
-
-```swift
-// Google Mobile Ads logging
-GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = 
-    [GADSimulatorID]
-
-// Opera Ads SDK logging (set before SDK initialization)
-// See OpAdxSdk documentation for details
-```
-
-### Test Ads
-
-Use AdMob test ad unit IDs for testing:
-- Banner: `ca-app-pub-3940256099942544/2934735716`
-- Interstitial: `ca-app-pub-3940256099942544/4411468910`
-- Rewarded: `ca-app-pub-3940256099942544/1712485313`
-- Native: `ca-app-pub-3940256099942544/3986624511`
+## Troubleshooting
 
 ### Common Issues
 
 **Q: Ads not loading?**
 A: Check the following:
-1. Verify custom event class name and parameters in AdMob dashboard
+1. Verify custom event class name and parameters are correctly configured in AdMob console
 2. Ensure Opera Ads SDK is successfully initialized
-3. Review detailed error messages in logs
+3. Check console logs for detailed error messages
 
 **Q: Class not found?**
 A: Make sure:
 1. `GMAOperaSDKAdapter` Pod is correctly installed
-2. Use full class name, e.g., `OpAdxAdmobBannerAd`
-3. Clean and rebuild project
+2. Class name is configured on the website
+3. Use the full class name: `OpAdxAdmobMediationAdapter`
+4. Clean and rebuild your project
 
 **Q: Native ad clicks not working?**
-A: Ensure all clickable views are properly set on `GADNativeAdView`.
+A: Ensure all clickable views are properly set in `GADNativeAdView`.
 
 ## Sample Project
 
-For complete sample projects, see:
+For a complete sample project, see:
 - [OpAdxSDK Demo - AdMob Adapter](https://github.com/operaads/iOS-sdk/tree/main/Demo/AdmobAdapter)
 
-## Support
+## Technical Support
 
 - 📧 Email: chenl@opera.com
 - 📖 Documentation: [Opera Ads iOS SDK Documentation]
@@ -406,7 +385,7 @@ For complete sample projects, see:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
 
 ## Related Links
 
