@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   # ――― 基本信息 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "GMAOperaSDKAdapter"
-  spec.version      = "2.8.3.0"
+  spec.version      = "2.9.1.0"
   spec.summary      = "Opera Ads Custom Adapter for Google Mobile Ads (AdMob) Mediation Platform."
   spec.description  = <<-DESC
     GMAOperaSDKAdapter is a custom mediation adapter that enables the integration of 
@@ -46,7 +46,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'Google-Mobile-Ads-SDK', '>= 12.8.0'
 
   # Opera Ads SDK - 使用CocoaPods发布的版本
-  spec.dependency 'OpAdxSdk', '2.8.3'
+  spec.dependency 'OpAdxSdk', '2.9.1'
 
   # ――― 工程配置 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # 静态库需要 -ObjC 标志以加载 Category
