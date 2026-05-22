@@ -481,13 +481,13 @@
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
       "kind": "StringLiteral",
       "offset": 165,
-      "length": 9,
-      "value": "\"2.9.1.0\""
+      "length": 10,
+      "value": "\"2.11.1.0\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
       "kind": "StringLiteral",
-      "offset": 208,
+      "offset": 209,
       "length": 6,
       "value": "\"1002\""
     }
