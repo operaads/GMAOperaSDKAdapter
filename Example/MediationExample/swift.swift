@@ -2,7 +2,7 @@
 //  swift.swift
 //  MediationExample
 //
-//  Created by Luan Chen on 2026/1/14.
+//  Created by Luan Chen on 9/3/2026.
 //  Copyright © 2026 Google, Inc. All rights reserved.
 //
 

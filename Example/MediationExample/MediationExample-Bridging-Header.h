@@ -2,15 +2,19 @@
 //  MediationExample-Bridging-Header.h
 //  MediationExample
 //
-//  Use this file to import your target's public headers that you would like to expose to Swift.
+//  Created by Opera Software on 2026.
+//  Copyright © 2026 Opera Norway AS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef MediationExample_Bridging_Header_h
+#define MediationExample_Bridging_Header_h
 
-// Import necessary headers for Swift access
+// Import any Objective-C headers that need to be exposed to Swift
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "StartViewController.h"
-#import "ExampleNativeAdView.h"
 #import "AdSourceConfig.h"
 #import "IDFAManager.h"
+#import "ExampleNativeAdView.h"
+
+#endif /* MediationExample_Bridging_Header_h */

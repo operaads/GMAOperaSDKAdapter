@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B7390D426E0A76000D12EE5 /* ExampleNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7390D326E0A76000D12EE5 /* ExampleNativeAdView.m */; };
 		2B7390D726E0A77700D12EE5 /* ExampleNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7390D526E0A77700D12EE5 /* ExampleNativeAdView.xib */; };
-		48BD0EE02F17CD190070238D /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD0EDF2F17CD190070238D /* swift.swift */; };
+		481F71062F5EABCE0036906C /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F71052F5EABCE0036906C /* swift.swift */; };
 		48CDFFED2F15E32B004DA621 /* IDFAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CDFFEC2F15E32B004DA621 /* IDFAManager.m */; };
 		4A0575BE1C287FFB0085EBE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0575BC1C287FFB0085EBE0 /* main.m */; };
 		4A8B03771C286FDA0052A060 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B03731C286FDA0052A060 /* LaunchScreen.xib */; };
@@ -28,8 +28,8 @@
 		2B7390D326E0A76000D12EE5 /* ExampleNativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleNativeAdView.m; sourceTree = "<group>"; };
 		2B7390D626E0A77700D12EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ExampleNativeAdView.xib; sourceTree = "<group>"; };
 		328F855867A6A845A2DE60B4 /* Pods-MediationExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediationExample.release.xcconfig"; path = "Target Support Files/Pods-MediationExample/Pods-MediationExample.release.xcconfig"; sourceTree = "<group>"; };
+		481F71052F5EABCE0036906C /* swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift.swift; sourceTree = "<group>"; };
 		489365B32F1788A800E6CC32 /* OpAdxAdapterAdmob.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OpAdxAdapterAdmob.xcframework; sourceTree = "<group>"; };
-		48BD0EDF2F17CD190070238D /* swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift.swift; sourceTree = "<group>"; };
 		48CDFFEC2F15E32B004DA621 /* IDFAManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDFAManager.m; sourceTree = "<group>"; };
 		48CDFFEE2F15E335004DA621 /* IDFAManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDFAManager.h; sourceTree = "<group>"; };
 		4A0575BB1C287FFB0085EBE0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MediationExample/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -100,7 +100,7 @@
 				4A8B03731C286FDA0052A060 /* LaunchScreen.xib */,
 				4A8B03751C286FDA0052A060 /* Main.storyboard */,
 				4A8B037B1C28702D0052A060 /* Supporting Files */,
-				48BD0EDF2F17CD190070238D /* swift.swift */,
+				481F71052F5EABCE0036906C /* swift.swift */,
 			);
 			path = MediationExample;
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 				2B7390D426E0A76000D12EE5 /* ExampleNativeAdView.m in Sources */,
 				AE5DE0491F3E0F32005C0A1D /* StartViewController.m in Sources */,
 				48CDFFED2F15E32B004DA621 /* IDFAManager.m in Sources */,
-				48BD0EE02F17CD190070238D /* swift.swift in Sources */,
+				481F71062F5EABCE0036906C /* swift.swift in Sources */,
 				4A0575BE1C287FFB0085EBE0 /* main.m in Sources */,
 				AEDDCB2F1F4501BA00BFB33C /* AdSourceConfig.m in Sources */,
 				4A93FA521C286D8F00479579 /* AppDelegate.m in Sources */,
@@ -433,6 +433,7 @@
 				PRODUCT_NAME = MediationExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "MediationExample/MediationExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
@@ -488,6 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.opera.test.OpAdxAdmobAdapter;
 				PRODUCT_NAME = MediationExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "MediationExample/MediationExample-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
