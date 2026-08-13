@@ -3,8 +3,8 @@ platform :ios, '13.0'
 target 'MediationExample' do
   
   pod 'Google-Mobile-Ads-SDK'
-  pod 'OpAdxSdk', '2.12.0'
-  pod 'GMAOperaSDKAdapter', '2.12.0.0'
+  pod 'OpAdxSdk', '2.12.1'
+  pod 'GMAOperaSDKAdapter', '2.12.1.0'
 #
 #  if ENV['BUILD_SNIPPETS']
 #    pod 'Snippets', :path => './Snippets'
