@@ -243,6 +243,37 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
+        "name": "OpAdxSdk",
+        "printedName": "OpAdxSdk",
+        "declKind": "Import",
+        "moduleName": "OpAdxAdapterAdmob"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -482,7 +513,7 @@
       "kind": "StringLiteral",
       "offset": 165,
       "length": 10,
-      "value": "\"2.12.1.0\""
+      "value": "\"2.14.0.0\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
