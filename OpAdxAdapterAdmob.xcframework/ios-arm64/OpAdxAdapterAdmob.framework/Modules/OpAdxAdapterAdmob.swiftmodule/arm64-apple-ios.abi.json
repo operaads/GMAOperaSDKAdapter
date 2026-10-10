@@ -483,37 +483,37 @@
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 7767,
+      "offset": 8123,
       "length": 40,
       "value": "\"OpAdxAdmobNativeAd - \""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 7803,
+      "offset": 8159,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "StringLiteral",
-      "offset": 7806,
+      "offset": 8162,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/OpAdxAdmobNativeAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 7891,
-      "length": 4,
-      "value": "true"
+      "offset": 8278,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
       "kind": "StringLiteral",
       "offset": 165,
       "length": 10,
-      "value": "\"2.14.0.0\""
+      "value": "\"2.15.0.0\""
     },
     {
       "filePath": "\/Users\/luanchen\/Documents\/gitlab\/OpAdxSdk_osa\/Adapter\/OpAdxAdapterAdmob\/OpAdxAdapterAdmob\/SdkVersion.swift",
